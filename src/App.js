@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const yellow = {backgroundColor: '#ffcc00'};
+const blue = {backgroundColor: '#0077cc'};
+
+class App extends React.Component {
+  render() {
+    return (
+      <div class="app">
+        <ul className="boxes">
+          <li className="box" style={blue}></li>
+          <li className="box" style={yellow}></li>
+          <li className="box" style={{backgroundColor: '#ff9900'}}></li>
+        </ul>
+      </div>
+    );
+  }
 }
 
 export default App;
